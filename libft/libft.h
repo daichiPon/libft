@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 00:35:28 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/04/26 05:26:28 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/04/26 05:48:08 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ char			*ft_strrchr(const char *str, int c);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
+char *ft_strjoin(char const *s1, char const *s2);
 
 #endif
