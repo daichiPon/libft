@@ -4,8 +4,8 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     if(!s||!f)
         return (NULL);
     size_t s_len;
-    size_t ßi;
-    char *sßtr;
+    size_t i;
+    char *str;
     s_len=0;
     i=0;
     while(s[s_len])

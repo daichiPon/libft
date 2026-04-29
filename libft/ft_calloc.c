@@ -6,7 +6,7 @@
 /*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/25 02:33:23 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/04/26 00:01:51 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/04/29 17:09:53 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	unsigned char	*c;
 	size_t			i;
 
+	if (!nmemb || !size)
+		return (malloc(0));
 	if (nmemb > SIZE_MAX / size)
 		return (NULL);
 	total = nmemb * size;

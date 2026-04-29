@@ -1,5 +1,5 @@
 #include <limits.h>
-#include <stdlib.h>
+#include <unistd.h>
 
 void	ft_putendl_fd(char *s, int fd)
 {
@@ -16,6 +16,6 @@ void	ft_putendl_fd(char *s, int fd)
 	if (i > 0)
 	{
 		write(fd, s, i);
-		write(fd, '\n', 1);
+		write(fd, "\n", 1);
 	}
 }
