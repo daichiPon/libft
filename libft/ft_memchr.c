@@ -3,30 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 15:57:40 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/04/25 23:22:51 by dnakamot         ###   ########.fr       */
+/*   Created: 2026/05/07 18:59:16 by nakamotodai       #+#    #+#             */
+/*   Updated: 2026/05/07 18:59:47 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const unsigned char	*str = s;
+	const unsigned char	*str;
 	size_t				i;
 
-	if (n == 0)
-		return (NULL);
+	str = (const unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
 		if (str[i] == (unsigned char)c)
-			return ((void *)&str[i]);
+			return ((void *)(str + i));
 		i++;
 	}
-	if ((unsigned char)c == '\0')
-		return ((void *)&str[i]);
 	return (NULL);
 }

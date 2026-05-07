@@ -6,7 +6,7 @@
 /*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 15:49:51 by username          #+#    #+#             */
-/*   Updated: 2026/05/07 18:47:17 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/05/07 18:50:36 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	i;
 	char	*str;
 
+	if (!s1 || !s2)
+		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	if (check_overflow(s1_len, s2_len))
