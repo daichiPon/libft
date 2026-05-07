@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_calloc.c                                       :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/04/25 02:33:23 by username         #+#    #+#              */
-/*   Updated: 2026/05/07 15:51:10 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/25 02:33:23 by username          #+#    #+#             */
+/*   Updated: 2026/05/08 01:47:53 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdint.h>
 #include <stdlib.h>
+#include <stdio.h>
+#include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t			total;
-	void			*call;
-	unsigned char	*c;
-	size_t			i;
+	void	*ptr;
 
-	if (!nmemb || !size)
-		return (malloc(0));
-	if (nmemb > SIZE_MAX / size)
+	if (size != 0 && count > SIZE_MAX / size)
 		return (NULL);
-	total = nmemb * size;
-	call = malloc(total);
-	if (!call)
-		return (NULL);
-	c = (unsigned char *) call;
-	i = 0;
-	while (i < total)
-	{
-		c[i] = 0;
-		i++;
-	}
-	return (call);
+	ptr = malloc(count * size);
+	if (ptr != NULL)
+		ft_bzero(ptr, count * size);
+	return (ptr);
 }
+
+// int main(void)
+// {
+// 	int *res;
+
+// 	res = ft_calloc(0, 0);
+// 	printf("%p\n", (void *)res);
+// 	free(res);
+// 	return (0);
+// }

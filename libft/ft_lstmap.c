@@ -6,7 +6,7 @@
 /*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 02:49:23 by username          #+#    #+#             */
-/*   Updated: 2026/05/07 16:09:53 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/05/07 22:41:11 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,53 +39,53 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (new_head);
 }
 
-void	*to_upper(void *content)
-{
-	char	*str;
-	char	*new_str;
-	int		i;
+// void	*to_upper(void *content)
+// {
+// 	char	*str;
+// 	char	*new_str;
+// 	int		i;
 
-	str = (char *) content;
-	new_str = ft_strdup(str);
-	if (!new_str)
-		return (NULL);
-	i = 0;
-	while (new_str[i])
-	{
-		new_str[i] = ft_toupper(new_str[i]);
-		i++;
-	}
-	return (new_str);
-}
+// 	str = (char *) content;
+// 	new_str = ft_strdup(str);
+// 	if (!new_str)
+// 		return (NULL);
+// 	i = 0;
+// 	while (new_str[i])
+// 	{
+// 		new_str[i] = ft_toupper(new_str[i]);
+// 		i++;
+// 	}
+// 	return (new_str);
+// }
 
-void	del_content(void *content)
-{
-	free(content);
-}
+// void	del_content(void *content)
+// {
+// 	free(content);
+// }
 
-void	print_list(t_list *lst)
-{
-	while (lst)
-	{
-		printf("%s\n", (char *) lst->content);
-		lst = lst->next;
-	}
-}
+// void	print_list(t_list *lst)
+// {
+// 	while (lst)
+// 	{
+// 		printf("%s\n", (char *) lst->content);
+// 		lst = lst->next;
+// 	}
+// }
 
-int	main(void)
-{
-	t_list	*lst;
-	t_list	*mapped;
+// int	main(void)
+// {
+// 	t_list	*lst;
+// 	t_list	*mapped;
 
-	lst = ft_lstnew(ft_strdup("hello"));
-	ft_lstadd_back(&lst, ft_lstnew(ft_strdup("world")));
-	ft_lstadd_back(&lst, ft_lstnew(ft_strdup("libft")));
-	printf("=== original ===\n");
-	print_list(lst);
-	mapped = ft_lstmap(lst, to_upper, del_content);
-	printf("\n=== mapped ===\n");
-	print_list(mapped);
-	ft_lstclear(&lst, del_content);
-	ft_lstclear(&mapped, del_content);
-	return (0);
-}
+// 	lst = ft_lstnew(ft_strdup("hello"));
+// 	ft_lstadd_back(&lst, ft_lstnew(ft_strdup("world")));
+// 	ft_lstadd_back(&lst, ft_lstnew(ft_strdup("libft")));
+// 	printf("=== original ===\n");
+// 	print_list(lst);
+// 	mapped = ft_lstmap(lst, to_upper, del_content);
+// 	printf("\n=== mapped ===\n");
+// 	print_list(mapped);
+// 	ft_lstclear(&lst, del_content);
+// 	ft_lstclear(&mapped, del_content);
+// 	return (0);
+// }
