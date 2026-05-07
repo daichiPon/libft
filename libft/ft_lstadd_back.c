@@ -6,7 +6,7 @@
 /*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/30 09:37:16 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/04/30 20:36:17 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/05/07 14:24:22 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ void ft_lstadd_back(t_list**lst,t_list*new)
     if(lst==NULL||new==NULL)
         return;
     if(*lst==NULL)
-        return *lst=new;
+    {
+        *lst=new;
+        return ;
+    }
     current_node=*lst;
     while(current_node->next!=NULL)
     {

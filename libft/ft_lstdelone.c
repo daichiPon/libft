@@ -6,7 +6,7 @@
 /*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/01 19:05:13 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/05/03 01:18:01 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/05/07 14:29:58 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ void ft_lstdelone(t_list *lst,void(*del)(void*))
     free(lst);
 }
 
-void del(void *content)
-{
-    free(content);
-}
+// void del(void *content)
+// {
+//     free(content);
+// }
 
 // int main()
 // {

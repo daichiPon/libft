@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 00:35:28 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/04/29 16:33:21 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/05/07 14:28:00 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define LIBFT_H
 
 # include <stddef.h>
+
+typedef struct s_list
+{
+    void *content;
+    struct s_list *next;
+} t_list;
 
 int				ft_atoi(const char *str);
 void			ft_bzero(void *s, size_t n);
@@ -52,4 +58,11 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
+t_list	        *ft_lstnew(void *content);
+void ft_lstadd_front(t_list **list,t_list *new);
+void ft_lstadd_back(t_list**lst,t_list*new);
+void ft_lstdelone(t_list *lst,void(*del)(void*));
+void ft_lstclear(t_list **lst, void (*del)(void*));
+void ft_lstiter(t_list *lst, void (*f)(void *));
+t_list *ft_lstmap(t_list *lst, void *(*f)(void *),void (*del)(void *));
 #endif
