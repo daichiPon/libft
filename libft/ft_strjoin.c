@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_strjoin.c                                      :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/05/07 15:49:51 by username         #+#    #+#              */
-/*   Updated: 2026/05/07 15:49:57 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/07 15:49:51 by username          #+#    #+#             */
+/*   Updated: 2026/05/07 17:10:22 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,16 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!str)
 		return (NULL);
 	i1 = 0;
-	while (s1_len)
+	while (i1 < s1_len)
 	{
 		str[i1] = s1[i1];
 		i1++;
-		s1_len--;
 	}
 	i2 = 0;
-	while (s2_len)
+	while (i2 < s2_len)
 	{
 		str[i1 + i2] = s2[i2];
 		i2++;
-		s2_len--;
 	}
 	str[i1 + i2] = '\0';
 	return (str);
