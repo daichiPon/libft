@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/03 00:50:40 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/05/07 14:26:23 by nakamotodai      ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_lstclear.c                                     :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/05/03 00:50:40 by username         #+#    #+#              */
+/*   Updated: 2026/05/07 16:06:16 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-    t_list *current;
-    t_list *node_next;
+	t_list	*current;
+	t_list	*node_next;
 
-    current=*lst;
-
-    while(current!=NULL)
-    {
-        node_next=current->next;
-        ft_lstdelone(current,del);
-        current=node_next;
-    }
-    *lst=NULL;
+	current = *lst;
+	while (current != NULL)
+	{
+		node_next = current->next;
+		ft_lstdelone(current, del);
+		current = node_next;
+	}
+	*lst = NULL;
 }
 
 // void del_clear(void *content)

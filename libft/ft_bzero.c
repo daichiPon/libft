@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/23 02:22:19 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/04/25 21:31:56 by dnakamot         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_bzero.c                                        :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/04/23 02:22:19 by username         #+#    #+#              */
+/*   Updated: 2026/05/07 15:51:02 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_bzero(void *buf, size_t size)
 	unsigned char	*b;
 
 	i = 0;
-	b = (unsigned char *)buf;
+	b = (unsigned char *) buf;
 	while (i < size)
 	{
 		b[i] = 0;

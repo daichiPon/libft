@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/30 07:45:26 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/04/30 08:40:49 by nakamotodai      ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_lstadd_front.c                                 :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/04/30 07:45:26 by username         #+#    #+#              */
+/*   Updated: 2026/05/07 16:03:04 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **list,t_list *new)
+void	ft_lstadd_front(t_list **list, t_list *new)
 {
-	if(!list||!new)
+	if (!list || !new)
 		return ;
-	if(*list==NULL)
+	if (*list == NULL)
 	{
-		*list=new;
-		return;
+		*list = new;
+		return ;
 	}
-	new->next=*list;
-	*list=new;
+	new->next = *list;
+	*list = new;
 }
 
 // int main()

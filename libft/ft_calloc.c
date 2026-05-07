@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/25 02:33:23 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/04/29 17:09:53 by dnakamot         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_calloc.c                                       :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/04/25 02:33:23 by username         #+#    #+#              */
+/*   Updated: 2026/05/07 15:51:10 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	call = malloc(total);
 	if (!call)
 		return (NULL);
-	c = (unsigned char *)call;
+	c = (unsigned char *) call;
 	i = 0;
 	while (i < total)
 	{

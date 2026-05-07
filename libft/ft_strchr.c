@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 14:55:04 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/04/26 00:34:53 by dnakamot         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_strchr.c                                       :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/04/24 14:55:04 by username         #+#    #+#              */
+/*   Updated: 2026/05/07 15:50:41 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ char	*ft_strchr(const char *s, int c)
 {
 	unsigned char	uc;
 
-	uc = (unsigned char)c;
+	uc = (unsigned char) c;
 	while (*s)
 	{
 		if (*s == uc)
-			return ((char *)s);
+			return ((char *) s);
 		s++;
 	}
 	if (uc == '\0')
-		return ((char *)s);
+		return ((char *) s);
 	return (NULL);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/26 04:09:50 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/04/26 05:30:35 by dnakamot         ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_substr.c                                       :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/04/26 04:09:50 by username         #+#    #+#              */
+/*   Updated: 2026/05/07 15:55:44 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str = malloc(len + 1);
 	if (!str)
 		return (NULL);
-	ft_memset(str,0,len+1);
+	ft_memset(str, 0, len + 1);
 	i = 0;
 	while (i < len && s[start] != '\0')
 	{
@@ -51,4 +51,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-

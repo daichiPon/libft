@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/01 19:05:13 by nakamotodai       #+#    #+#             */
-/*   Updated: 2026/05/07 14:29:58 by nakamotodai      ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_lstdelone.c                                    :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/05/01 19:05:13 by username         #+#    #+#              */
+/*   Updated: 2026/05/07 15:52:28 by username        ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "libft.h"
 #include <stdlib.h>
 #include <stdio.h>
-void ft_lstdelone(t_list *lst,void(*del)(void*))
+
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    if(!lst ||!del)
-        return ;
-    (*del)(lst->content);
-    lst->content=NULL;
-    free(lst);
+	if (!lst || !del)
+		return ;
+	(*del)(lst->content);
+	lst->content = NULL;
+	free(lst);
 }
 
 // void del(void *content)
@@ -40,7 +40,7 @@ void ft_lstdelone(t_list *lst,void(*del)(void*))
 //     lst1=ft_lstnew(ft_strdup("lst1"));
 //     lst2=ft_lstnew(ft_strdup("lst2"));
 //     lst3=ft_lstnew(ft_strdup("lst3"));
-    
+
 //     ft_lstadd_front(&head,lst1);
 //     ft_lstadd_front(&head,lst2);
 //     ft_lstadd_front(&head,lst3);

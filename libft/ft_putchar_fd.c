@@ -1,5 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                       :::      ::::::::    */
+/*   ft_putchar_fd.c                                   :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/05/07 16:02:48 by username         #+#    #+#              */
+/*   Updated: 2026/05/07 16:02:49 by username        ###   ########.fr        */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
-void ft_putchar_fd(char c, int fd)
+
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd,&c,1);
+	write(fd, &c, 1);
 }
