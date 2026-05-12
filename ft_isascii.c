@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 01:04:13 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/04/25 21:32:16 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/05/09 01:53:30 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
 	return (0 <= c && c <= 127);
 }

@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_memcmp.c                                       :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/04/23 16:26:29 by username         #+#    #+#              */
-/*   Updated: 2026/05/07 16:06:23 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/23 16:26:29 by username          #+#    #+#             */
+/*   Updated: 2026/05/09 18:11:26 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 
-int	ft_memcmp(const void *dest, const void *src, size_t num)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char	*d;
 	unsigned char	*s;
 
-	d = (unsigned char *) dest;
-	s = (unsigned char *) src;
-	while (num > 0)
+	d = (unsigned char *) s1;
+	s = (unsigned char *) s2;
+	while (n > 0)
 	{
 		if (*d != *s)
 			return (*d - *s);
 		d++;
 		s++;
-		num--;
+		n--;
 	}
 	return (0);
 }

@@ -3,26 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 02:06:16 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/04/26 00:34:17 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/05/09 02:13:20 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*ft_memset(void *buf1, int c, size_t bit)
+void	*ft_memset(void *b, int c, size_t bit)
 {
 	size_t			i;
-	unsigned char	*b;
+	unsigned char	*p;
 
 	i = 0;
-	b = (unsigned char *)buf1;
+	p = (unsigned char *)b;
 	while (i < bit)
 	{
-		b[i] = (unsigned char)c;
+		p[i] = (unsigned char)c;
 		i++;
 	}
-	return (buf1);
+	return (b);
 }

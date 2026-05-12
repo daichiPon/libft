@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 00:55:10 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/04/26 00:33:42 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/05/09 02:01:19 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
 	return (32 <= c && c <= 126);
 }

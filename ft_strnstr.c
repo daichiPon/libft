@@ -3,31 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 00:18:57 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/04/26 00:34:34 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/05/09 18:20:59 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-char	*ft_strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	bigi;
 	size_t	littlei;
 
-	if (!little[0])
-		return ((char *)big);
+	if (!needle[0])
+		return ((char *)haystack);
 	bigi = 0;
-	while (bigi < len && big[bigi])
+	while (bigi < len && haystack[bigi])
 	{
 		littlei = 0;
-		while ((bigi + littlei) < len && big[bigi + littlei] == little[littlei])
+		while ((bigi + littlei) < len && haystack[bigi + littlei] == needle[littlei])
 		{
 			littlei++;
-			if (little[littlei] == '\0')
-				return ((char *)&big[bigi]);
+			if (needle[littlei] == '\0')
+				return ((char *)&haystack[bigi]);
 		}
 		bigi++;
 	}

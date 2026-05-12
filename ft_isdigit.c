@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 00:55:10 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/04/25 21:57:20 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/05/09 01:49:16 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
 	return ('0' <= c && c <= '9');
 }

@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_memcpy.c                                       :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/04/23 16:16:43 by username         #+#    #+#              */
-/*   Updated: 2026/05/07 16:05:21 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/23 16:16:43 by username          #+#    #+#             */
+/*   Updated: 2026/05/09 02:34:57 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+//https://en.cppreference.com/c/string/byte/memcpy
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t num)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned char	*d;
 	unsigned char	*s;
 
-	if (!dest && !src)
-		return (dest);
-	d = (unsigned char *) dest;
+	d = (unsigned char *) dst;
 	s = (unsigned char *) src;
-	while (num > 0)
+	while (n > 0)
 	{
 		*d = *s;
 		d++;
 		s++;
-		num--;
+		n--;
 	}
-	return (dest);
+	return (dst);
 }

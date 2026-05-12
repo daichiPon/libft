@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 00:17:46 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/04/26 00:32:49 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/05/09 18:27:07 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,16 @@ int	ft_atoi(const char *str)
 		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		result = result * 10 + (str[i] - '0');
-		i++;
-		if (result > INT_MAX)
+		if (result > INT_MAX / 10
+			|| (result == INT_MAX / 10 && str[i] - '0' > 7))
 		{
 			if (sign == 1)
 				return (INT_MAX);
 			else
 				return (INT_MIN);
 		}
+		result = result * 10 + (str[i] - '0');
+		i++;
 	}
 	return ((int)(sign * result));
 }

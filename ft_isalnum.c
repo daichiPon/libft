@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 00:45:48 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/04/25 21:58:51 by dnakamot         ###   ########.fr       */
+/*   Updated: 2026/05/09 01:53:02 by nakamotodai      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int	ft_isalnum(char c)
+int	ft_isalnum(int c)
 {
 	return (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z') || ('0' <= c
 			&& c <= '9'));
