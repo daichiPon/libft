@@ -3,32 +3,35 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/25 02:33:23 by username          #+#    #+#             */
-/*   Updated: 2026/05/08 01:47:53 by nakamotodai      ###   ########.fr       */
+/*   Created: 2026/05/12 20:07:22 by dnakamot          #+#    #+#             */
+/*   Updated: 2026/05/12 22:11:45 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-void	*ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	void	*ptr;
+	size_t	total;
+	char	*str;
 
-	if (size != 0 && count > SIZE_MAX / size)
+	if (size != 0 && nmemb > __SIZE_MAX__ / size)
 		return (NULL);
-	ptr = malloc(count * size);
-	if (ptr != NULL)
-		ft_bzero(ptr, count * size);
-	return (ptr);
+	total = nmemb * size;
+	str = malloc(sizeof(char) * total);
+	if (!str)
+		return (NULL);
+	ft_bzero(str, total);
+	return (str);
 }
 
-// int main(void)
+// int	main(void)
 // {
-// 	int *res;
+// 	int	*res;
 
 // 	res = ft_calloc(0, 0);
 // 	printf("%p\n", (void *)res);

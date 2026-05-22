@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_itoa.c                                         :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/05/07 15:52:11 by username         #+#    #+#              */
-/*   Updated: 2026/05/07 15:52:12 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/07 15:52:11 by username          #+#    #+#             */
+/*   Updated: 2026/05/13 00:01:48 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <stdlib.h>
 
-int	ft_digit(int n)
+int	ft_len(long n)
 {
-	long	nb;
-	int		count;
+	int	len;
 
-	nb = n;
-	count = 1;
-	if (nb < 0)
-		nb *= -1;
-	while (nb > 9)
+	len = 0;
+	if (n <= 0)
+		len = 1;
+	while (n != 0)
 	{
-		nb /= 10;
-		count++;
+		n /= 10;
+		len++;
 	}
-	return (count);
+	return (len);
 }
 
 char	*ft_itoa(int n)
@@ -36,11 +35,11 @@ char	*ft_itoa(int n)
 	int		sign;
 	char	*str;
 
-	nb = n;
+	nb = (long)n;
 	sign = 0;
 	if (nb < 0 && ++sign)
 		nb *= -1;
-	digit = ft_digit(n);
+	digit = ft_len(nb);
 	str = malloc(sizeof(char) * (digit + sign + 1));
 	if (!str)
 		return (NULL);
@@ -54,3 +53,8 @@ char	*ft_itoa(int n)
 		str[0] = '-';
 	return (str);
 }
+
+// int	main(void)
+// {
+// 	printf("%s", ft_itoa(0));
+// }

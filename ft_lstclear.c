@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_lstclear.c                                     :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/05/03 00:50:40 by username         #+#    #+#              */
-/*   Updated: 2026/05/07 16:06:16 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/05/03 00:50:40 by username          #+#    #+#             */
+/*   Updated: 2026/05/14 15:11:38 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*node_next;
 
 	current = *lst;
-	while (current != NULL)
+	if (!del)
+		return ;
+	while (current)
 	{
 		node_next = current->next;
 		ft_lstdelone(current, del);

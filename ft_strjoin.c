@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 15:49:51 by username          #+#    #+#             */
-/*   Updated: 2026/05/07 18:50:36 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/05/12 22:13:30 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 static int	check_overflow(size_t s1_len, size_t s2_len)
 {
-	if (s1_len > SIZE_MAX - s2_len - 1)
+	if (s1_len > __SIZE_MAX__ - s2_len - 1)
 		return (1);
 	return (0);
 }

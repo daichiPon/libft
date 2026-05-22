@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakamotodaichi <nakamotodaichi@student.    +#+  +:+       +#+        */
+/*   By: dnakamot <dnakamot@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/26 00:18:57 by dnakamot          #+#    #+#             */
-/*   Updated: 2026/05/09 18:20:59 by nakamotodai      ###   ########.fr       */
+/*   Updated: 2026/05/12 23:48:37 by dnakamot         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	while (bigi < len && haystack[bigi])
 	{
 		littlei = 0;
-		while ((bigi + littlei) < len && haystack[bigi + littlei] == needle[littlei])
+		while ((bigi + littlei) < len && haystack[bigi
+				+ littlei] == needle[littlei])
 		{
 			littlei++;
 			if (needle[littlei] == '\0')
